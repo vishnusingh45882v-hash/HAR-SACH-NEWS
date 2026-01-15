@@ -4,91 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Har Sach | OTT News & Jobs</title>
+    <title>Har Sach | Professional News & Jobs Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Light Mode */
             --primary: #0A5FFF;
             --primary-hover: #004CFF;
             --active-green: #22C55E;
             --reported-red: #EF4444;
             --bg-color: #FFFFFF;
-            --card-color: #F4F6FA;
-            --text-main: #111111;
-            --text-secondary: #666666;
-            --success: #1DB954;
-            --warning: #F4B400;
-            --danger: #E53935;
-            --border-color: #e2e8f0;
+            --card-color: #F8FAFC;
+            --text-main: #0F172A;
+            --text-secondary: #64748B;
+            --border-color: #E2E8F0;
         }
         .dark {
-            /* Dark Mode */
             --primary: #4D8DFF;
-            --primary-hover: #66A3FF;
-            --bg-color: #121212;
-            --card-color: #1E1E1E;
-            --text-main: #FFFFFF;
-            --text-secondary: #B3B3B3;
-            --success: #22C55E;
-            --danger: #EF4444;
-            --border-color: #333333;
+            --bg-color: #0F172A;
+            --card-color: #1E293B;
+            --text-main: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border-color: #334155;
         }
         body {
             font-family: 'Roboto', sans-serif;
-            scroll-behavior: smooth;
-            -webkit-tap-highlight-color: transparent;
             background-color: var(--bg-color);
             color: var(--text-main);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
         }
-        .newspaper-font {
-            font-family: 'Playfair Display', serif;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .bg-custom-card {
-            background-color: var(--card-color);
-        }
-        .border-custom {
-            border-color: var(--border-color);
-        }
+        .newspaper-font { font-family: 'Playfair Display', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .bg-custom-card { background-color: var(--card-color); }
+        .border-custom { border-color: var(--border-color); }
         .text-main { color: var(--text-main); }
         .text-secondary { color: var(--text-secondary); }
-        .text-primary-custom { color: var(--primary); }
-        .bg-primary-custom { background-color: var(--primary); }
         
-        h1, h2, h3 {
-            font-size: 18px;
-            font-weight: 700;
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
-        p {
-            font-size: 15px;
-            font-weight: 400;
-        }
-        .meta-text {
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* Comment System Animations */
-        @keyframes pulse-new-comment {
-            0% { border-color: var(--primary); transform: scale(1); }
-            50% { border-color: var(--active-green); transform: scale(1.02); }
-            100% { border-color: var(--primary); transform: scale(1); }
-        }
-        .new-comment-pulse {
-            animation: pulse-new-comment 1s ease-in-out 1;
-        }
-
+        
         .comment-box-transition {
-            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .shadow-soft {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
         }
     </style>
 <script type="importmap">
@@ -102,7 +66,7 @@
 }
 </script>
 </head>
-<body class="pb-20">
+<body class="pb-20 overflow-x-hidden">
     <div id="root"></div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+{
+  "name": "Har Sach Professional Portal",
+  "description": "A world-class digital platform for Har Sach, featuring AI-powered insights, service showcases, and a modern responsive interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
